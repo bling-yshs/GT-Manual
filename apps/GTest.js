@@ -16,11 +16,6 @@ export class bbsVerification extends plugin {
       ],
       rule: [
         {
-          dsc: '米游社手动签到',
-          reg: '^#*(原神|星铁|米游社)?签到$',
-          fnc: 'sign'
-        },
-        {
           dsc: '重新连接WebSocket',
           reg: '^#GT重连ws$',
           fnc: 'reconnection',
@@ -98,7 +93,7 @@ export class bbsVerification extends plugin {
 	      logger.mark(`[${logger.cyan('GT-Manual')}] > [${logger.red('重连成功')}]`)
 	      resolve();
 	    };
-	  });	
+	  });
 	  if (!Tools.ws) {
 	    logger.mark(`[${logger.cyan('GT-Manual')}] > [${logger.red('重连失败')}]`)
 	    return false;
